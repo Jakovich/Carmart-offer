@@ -44,6 +44,7 @@ gulp.task("style", function(){
 
 gulp.task('concatMainJs', function() {
   return gulp.src('js/*.js')
+    .pipe(plumber())
     .pipe(concat('main.js'))
     .pipe(gulp.dest('build/js/'))
     .pipe(uglify())
