@@ -1,10 +1,7 @@
-
-
 .slides__item {
   width: 500px;
   position: relative;
 }
-
 
 .slides__link {
   display: block;
@@ -13,6 +10,7 @@
   border-radius: 8px;
   padding: 10px 0;
   width: 200px;
+  font-size: 18px;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -29,8 +27,8 @@
     left: 20px;
     top: 10px;
     background-image: url('../img/icons/lightning.png');
-    width: 23px;
-    height: 41px;
+    width: 15px;
+    height: 27px;
   }
 }
 
@@ -40,6 +38,7 @@
   font-size: 16px;
   color: #333333;
   margin: 0;
+  margin-bottom: 6px;
   transition: @transition;
   
   width: 100%;
@@ -60,7 +59,6 @@
   transition: @transition;
 }
 
-
 .slides__current-price {
   font-size: 16px;
   color: #f2f2f2;
@@ -72,6 +70,7 @@
   display: inline-block;
   border-radius: 5px;
   transition: @transition;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.4);
   p {
     transform: skewX(15deg);
     margin: 0;
@@ -90,26 +89,22 @@
 
   .slides__current-price {
     font-size: 18px;
-    
     padding: 10px 20px;
     font-weight: 900;
-    
     border-radius: 10px;
   }
   
   .slides__link {
     border-radius: 13px;
-    padding: 20px 0;
+    padding: 15px 0;
     width: 250px;
+    font-size: 20px;
     top: 30px;
     &::before {
-      position: absolute;
-      content: '';
+    
       left: 20px;
-      top: 10px;
-      background-image: url('../img/icons/lightning.png');
-      width: 23px;
-      height: 41px;
+      top: 15px;
+      
     }
   }
 }

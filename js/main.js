@@ -50,7 +50,7 @@ $(document).ready(function(){
     backZoom:0.6, 
     slidesPerScroll:3, 
     speed:400, 
-    buttonNav: "none",
+    buttonNav: 'none',
     //directionNav:false,
     autoplay:true, 
     autoplayInterval:5000, 

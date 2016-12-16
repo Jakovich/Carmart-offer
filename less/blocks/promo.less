@@ -4,36 +4,38 @@
   padding: 5px 10px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .promo__date {
   text-align:center;
-  width: 200px;
+  width: 220px;
   color: @text-gray;
   background-color: #e6e6e6;
-  padding: 40px 0;
+  padding: 20px 0;
   border-radius: 13px;
   box-shadow: @box-shadow;
-  font-size: 25px;
-  transform: skewX(-20deg);
+  font-size: 16px;
+  font-weight: 400;
+  transform: skewX(-15deg);
   
   p {
     margin: 0;
-    transform: skewX(20deg);
+    transform: skewX(15deg);
   }
 }
 
 .promo__info {
   text-align:center;
-  padding: 40px 0;
+  padding: 5px 0;
   border-radius: 13px;
-  width: 200px;
+  width: 220px;
   background-color: @green-light;
-  transform: skewX(-20deg);
+  transform: skewX(-15deg);
   color: #ffffff;
   p {
     margin: 0;
-    transform: skewX(20deg);
+    transform: skewX(15deg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,15 +44,16 @@
 }
 
 .promo__quantity {
-  font-size: 50px;
-  padding: 10px;
+  font-size: 40px;
+  padding: 0 10px;
+  padding-left: 15px;
   border-right: 2px solid #54c0aa;
   margin-right: 10px;
   text-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
 
 .promo__exp {
-  font-size: 25px;
+  font-size: 18px;
   text-align: left;
 }
 .promo__counter-title {
