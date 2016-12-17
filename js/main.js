@@ -12,15 +12,7 @@ $(document).ready(function(){
   var rest = (deadLine - new Date())/1000;
   clock.setTime(rest);
   clock.start();
-  /*function addBigClass() {
-    $('.slider__item:visible').each(function(){
-        $(this).removeClass('slider__item--big');
-        if($(this).css('z-index') === '5') {
-          $(this).addClass('slider__item--big')
-        }
-                                    
-    });
-  }*/
+   
   function addBigClass() {
     $('.slides__item:visible').each(function(){
         
@@ -45,7 +37,7 @@ $(document).ready(function(){
     frontWidth:400, 
     frontHeight:400, 
     carouselWidth:1000,
-    carouselHeight:430, 
+    carouselHeight:400, 
     directionNav: true,
     backZoom:0.6, 
     slidesPerScroll:3, 
@@ -54,8 +46,8 @@ $(document).ready(function(){
     //directionNav:false,
     autoplay:true, 
     autoplayInterval:5000, 
-    //pauseOnHover:true, 
-    //mouse:true, 
+    pauseOnHover:true, 
+    mouse:true, 
     shadow:false,
     before: function(carousel){
       removeBigClass()

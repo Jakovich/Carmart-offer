@@ -8,6 +8,7 @@
   font-size: 20px;
   font-weight: 300;
   margin-top: 40px;
+  margin-bottom: 10px;
   text-align: center;
   color: @text-gray;
 }
@@ -17,7 +18,8 @@
   color: #333333;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 45px;
+  margin-top: 10px;
   span {
     color: @green-light;
   }
@@ -28,15 +30,20 @@
   margin: 0 auto;
   width: 300px;
   background-color: @green-light;
+  background: linear-gradient(to bottom, #10aa8b, #10aa8b, #10aa8b, #0c9171);
   color: #ffffff;
   padding: 20px 0;
   text-align: center;
   font-size: 25px;
   border-radius: 13px;
   box-shadow: @box-shadow;
+  transition: @transition;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .intro__slider {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
