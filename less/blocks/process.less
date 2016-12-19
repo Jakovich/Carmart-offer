@@ -11,5 +11,74 @@
 .process__item {
   width: 185px;
   text-align: center;
+  
+  padding-top: 130px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    background-image: url('../img/common-sprite.png');
+    background-position: @arrow-right-offset-x @arrow-right-offset-y;
+    width: @arrow-right-width;
+    height: @arrow-right-height;
+    right: -20px;
+    top: 60px;
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../img/common-sprite.png');
+    top:0;
+    left: 50%;
+    margin-left: -60px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid @green-light;
+  }
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.process__item--choice {
+  &::before {
+    background-position: @process-choice-offset-x @process-choice-offset-y;
+  }
+}
+
+.process__item--options {
+   &::before {
+    background-position: @process-options-offset-x @process-options-offset-y;
+  }
+}
+
+.process__item--payment {
+   &::before {
+    background-position: @process-payment-offset-x @process-payment-offset-y;
+  }
+}
+
+.process__item--delivery {
+   &::before {
+    background-position: @process-delivery-offset-x @process-delivery-offset-y;
+  }
+}
+
+.process__name {
+  font-size: 18px;
   color: @text-common;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.process__exp {
+  margin-top: 10px;
+  color: #666666;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
 }

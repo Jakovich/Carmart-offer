@@ -14,7 +14,7 @@ Version: 1.0
 {
 	position :relative ;
 	margin :0 auto;
-	width :1000px;
+	width :960px;
 	height :auto;
 	border :none;
 	overflow : visible ;
@@ -65,12 +65,14 @@ Version: 1.0
 .carousel .nextButton
 {
 	position :absolute ;
-	right :-10px;
+	right : -30px;
 	top :50%;
-    margin-top: -60px;
-	width :80px;
-	height :80px;
-	background : url("../img/icons/next.png") no-repeat center;
+    margin-top: -50px;
+
+	background : url("../img/common-sprite.png");
+    width: @next-width;
+    height: @next-height;
+    background-position: @next-offset-x @next-offset-y;
 	cursor :pointer ;
 	z-index :9999;
 }
@@ -78,12 +80,14 @@ Version: 1.0
 .carousel .prevButton
 {
 	position :absolute ;
-	left :-10px;
+	left :-30px;
 	top :50%;
-    margin-top: -60px;
-	width :80px;
-	height: 80px;		
-	background : url("../img/icons/prev.png");
+    margin-top: -50px;
+			
+	background : url("../img/common-sprite.png");
+    width: @prev-width;
+    height: @prev-height;
+    background-position: @prev-offset-x @prev-offset-y;
 	cursor :pointer ;
 	z-index :9999;
 }

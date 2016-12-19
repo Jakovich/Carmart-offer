@@ -9,8 +9,8 @@
   background-color: @red-transparent;
   border-radius: 8px;
   padding: 10px 0;
-  width: 200px;
-  font-size: 18px;
+  width: 143px;
+  font-size: 16px;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -25,11 +25,12 @@
   &::before {
     position: absolute;
     content: '';
-    left: 20px;
+    left: 10px;
     top: 10px;
-    background-image: url('../img/icons/lightning.png');
-    width: 15px;
-    height: 27px;
+    background-image: url('../img/common-sprite.png');
+    width: @lightning-width;
+    height: @lightning-height;
+    background-position: @lightning-offset-x @lightning-offset-y;
   }
 }
 
@@ -54,18 +55,18 @@
 .slides__ex-price {
   color: @text-gray;
   text-decoration: line-through;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
   margin-right: 10px;
   transition: @transition;
 }
 
 .slides__current-price {
-  font-size: 16px;
+  font-size: 14px;
   color: #f2f2f2;
   text-align:center;
   background-color: @green-light;
-  padding: 5px 10px;
+  padding: 7px 10px;
   font-weight: 900;
   transform: skewX(-15deg);
   display: inline-block;
@@ -79,14 +80,15 @@
 }
 
 .slides__item--big {
+  max-height: 370px;
   .slides__title {
-    font-size: 30px;
+    font-size: 24px;
   }
+  
   .slides__ex-price {
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 10px;
   }
-
 
   .slides__current-price {
     font-size: 18px;
@@ -96,16 +98,10 @@
   }
   
   .slides__link {
-    border-radius: 13px;
-    padding: 15px 0;
-    width: 250px;
-    font-size: 20px;
-    top: 30px;
+    width: 170px;
+    top: 20px;
     &::before {
-    
-      left: 20px;
-      top: 15px;
-      
+      left: 8px;
     }
   }
 }

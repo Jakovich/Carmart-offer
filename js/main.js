@@ -1,5 +1,6 @@
 'use strict';
 $(document).ready(function(){
+  /*инициализация счетчика*/
   var clock;
   clock = $('#flip-clock').FlipClock({
     clockFace: "DailyCounter",
@@ -12,7 +13,9 @@ $(document).ready(function(){
   var rest = (deadLine - new Date())/1000;
   clock.setTime(rest);
   clock.start();
-   
+  
+  /*инициализация слайдера*/
+  //добавляет класс изображению в середине слайдера
   function addBigClass() {
     $('.slides__item:visible').each(function(){
         
@@ -29,15 +32,14 @@ $(document).ready(function(){
   }
   
   
-  
   $('.carousel').carousel({
     hAlign:'center', 
     vAlign:'center', 
     hMargin:1.2, 
     frontWidth:400, 
     frontHeight:400, 
-    carouselWidth:1000,
-    carouselHeight:400, 
+    carouselWidth:960,
+    carouselHeight:370, 
     directionNav: true,
     backZoom:0.6, 
     slidesPerScroll:3, 
