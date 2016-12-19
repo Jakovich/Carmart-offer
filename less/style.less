@@ -1,19 +1,23 @@
 @import "node_modules/normalize.less/normalize.less";
 @import "variables.less";
 @import "mixins.less";
+@import "common-sprite.less";
 @import "blocks/main-nav.less";
+@import "blocks/main-footer.less";
 @import "blocks/intro.less";
 @import "blocks/promo.less";
 @import "blocks/flipclock.less";
 @import "blocks/slider.less";
 @import "blocks/reasons.less";
+@import "blocks/process.less";
+@import "blocks/rules.less";
 @import "blocks/carousel.less";
 
 
 
 body {
   font-family: "Roboto", "Arial", sans-serif;
-  min-width: 1000px;
+  min-width: 1365px;
 }
 
 img {
@@ -23,5 +27,17 @@ img {
 
 a {
   text-decoration: none;
+}
+
+main {
+  background: url("../img/bg.jpg");
+}
+
+.wrapper {
+  width: 1365px;
+  padding: 5px 0;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 

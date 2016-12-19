@@ -97,13 +97,13 @@ gulp.task("copyJslib", function() {
 });
 
 
-gulp.task("franchise-add-sprite-sm", function(){
-  var spriteData = gulp.src('img/franchise/franchise-create-icons-sm/*.png').pipe(spritesmith({
-    imgName: 'franchise-add-sprite-sm.png',
-    cssName: 'franchise-add-sprite-sm.less'
+gulp.task("common-sprite", function(){
+  var spriteData = gulp.src('img/icons/*.png').pipe(spritesmith({
+    imgName: 'common-sprite.png',
+    cssName: 'common-sprite.less'
   }));
-    spriteData.img.pipe(gulp.dest('img/franchise')); 
-    spriteData.css.pipe(gulp.dest('less/sprites')); 
+    spriteData.img.pipe(gulp.dest('img/')); 
+    spriteData.css.pipe(gulp.dest('less/')); 
 });
 
 

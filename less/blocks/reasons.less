@@ -2,11 +2,101 @@
   margin-top: 100px;
 }
 
+.reasons__wrapper {
+  margin: 0 auto;
+  width: 980px;
+}
+
 .reasons__title {
+  color: @text-common;
   text-align: center;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 25px;
   span {
+    font-weight: 600;
+    color: @red;
+  }
+}
+
+.reasons__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reasons__item {
+  width: 210px;
+  background-color: #f2f3f5;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  padding-top: 95px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content:'';
+    background-image: url('../img/common-sprite.png');
+    left: 50%;
+  }
+}
+
+.reasons__item--price {
+  &::before {
+    top: 40px;
+    background-position: @reasons-price-offset-x @reasons-price-offset-y;
+    width: @reasons-price-width;
+    height: @reasons-price-height;
+    margin-left: -@reasons-price-width/2;
+  }
+}
+
+.reasons__item--payment {
+  &::before {
+    top: 40px;
+    background-position: @reasons-payment-offset-x @reasons-payment-offset-y;
+    width: @reasons-payment-width;
+    height: @reasons-payment-height;
+    margin-left: -@reasons-payment-width/2;
+  }
+}
+
+.reasons__item--return {
+  &::before {
+    top: 40px;
+    background-position: @reasons-return-offset-x @reasons-return-offset-y;
+    width: @reasons-return-width;
+    height: @reasons-return-height;
+    margin-left: -@reasons-return-width/2;
+  }
+}
+
+.reasons__item--reserve {
+  &::before {
+    top: 40px;
+    background-position: @reasons-reserve-offset-x @reasons-reserve-offset-y;
+    width: @reasons-reserve-width;
+    height: @reasons-reserve-height;
+    margin-left: -@reasons-reserve-width/2;
+  }
+}
+
+.reasons__name {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 21px;
+  color: @text-common;
+  span {
+    display: block;
     font-weight: 400;
   }
+}
+
+.reasons__link {
+  color: @red;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.reasons__subtitle {
+  color: #999999;
+  font-size: 12px;
 }
