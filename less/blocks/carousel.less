@@ -19,7 +19,9 @@ Version: 1.0
 	border :none;
 	overflow : visible ;
 }
-
+.carousel--big {
+  width :1365px;
+}
 /* _______________________________________________ */
 
 /* SLIDES */
@@ -82,14 +84,23 @@ Version: 1.0
 	position :absolute ;
 	left :-30px;
 	top :50%;
-    margin-top: -50px;
-			
+    margin-top: -50px;	
 	background : url("../img/common-sprite.png");
     width: @prev-width;
     height: @prev-height;
     background-position: @prev-offset-x @prev-offset-y;
 	cursor :pointer ;
 	z-index :9999;
+}
+
+.carousel--big .nextButton {
+  right :200px;
+  margin-top: -30px;
+}
+
+.carousel--big .prevButton {
+  left :200px;
+  margin-top: -30px;
 }
 
 /* _______________________________________________ */

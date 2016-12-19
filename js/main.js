@@ -32,7 +32,7 @@ $(document).ready(function(){
   }
   
   
-  $('.carousel').carousel({
+  $('#carousel-intro').carousel({
     hAlign:'center', 
     vAlign:'center', 
     hMargin:1.2, 
@@ -45,7 +45,6 @@ $(document).ready(function(){
     slidesPerScroll:3, 
     speed:400, 
     buttonNav: 'none',
-    //directionNav:false,
     autoplay:true, 
     autoplayInterval:5000, 
     pauseOnHover:true, 
@@ -60,6 +59,44 @@ $(document).ready(function(){
     backOpacity:1
   });
   addBigClass();
+  
+  $('#carousel-advantages').carousel({
+    hAlign:'center', 
+    vAlign:'center', 
+    hMargin:1.2, 
+    frontWidth:1365, 
+    frontHeight:600, 
+    carouselWidth:1365,
+    carouselHeight:600, 
+    directionNav: true,
+    backZoom:1, 
+    slidesPerScroll:1, 
+    speed:400, 
+    buttonNav: 'none',
+    autoplay:true, 
+    autoplayInterval:5000, 
+    pauseOnHover:false, 
+    mouse:false, 
+    shadow:false,
+  })
+  
+  //кнопка скролла наверх
+  $('.main-footer__up').click(function(evt){
+    evt.preventDefault();
+    $("body,html").animate({scrollTop:0},800);
+  })
+  
+  $('.main-nav__item a').click(function () { 
+     var elementClick = $(this).attr("href");
+     var destination = $(elementClick).offset().top - 80;
+     if($.browser.safari){
+       $('body').animate( { scrollTop: destination }, 1100 );
+     }else{
+       $('html').animate( { scrollTop: destination }, 1100 );
+     }
+     return false;
+});
+  
                                 
  
 })

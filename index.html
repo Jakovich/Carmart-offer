@@ -15,10 +15,10 @@
       <div class="main-nav__wrapper">
         <div class="main-nav__link"><a href="#">На главную</a></div>
         <ul class="main-nav__items">
-          <li class="main-nav__item"><a href="#">Автомобили</a></li>
-          <li class="main-nav__item"><a href="#">Скидки</a></li>
-          <li class="main-nav__item"><a href="#">Как это работает</a></li>
-          <li class="main-nav__item"><a href="#">Отзывы</a></li>
+          <li class="main-nav__item main-nav__item--active"><a href="#intro">Автомобили</a></li>
+          <li class="main-nav__item"><a href="#choice">Скидки</a></li>
+          <li class="main-nav__item"><a href="#process">Как это работает</a></li>
+          <li class="main-nav__item"><a href="#reviews">Отзывы</a></li>
         </ul>
         <div class="main-nav__logo"><img src="img/logo.png" alt="Carmart" width="170" height="24"></div>
       </div>
@@ -26,13 +26,13 @@
   </header>
   <main>
     <div class="wrapper">
-      <section class="intro">
+      <section class="intro" id="intro">
         <div class="itro__wrapper">
           <p class="intro__exp">Мы отобрали для вас 700 автомобилей по себестоимости</p>
           <h1 class="intro__title"><span class="intro__green"><span class="intro__regular">700+</span> Авто</span> по себестоимости!</h1>
           <a href="#" class="common-btn">Посмотреть все 752</a>
           <div class="intro__slider">
-            <div class="carousel">
+            <div class="carousel" id="carousel-intro">
               <div class="slides">
                 <div class="slides__item">
                   <a href="#" class="slides__link">Получить</a>
@@ -117,8 +117,8 @@
             <p><span class="promo__quantity">20</span> <span class="promo__exp">Авто осталось по&nbsp;акции!</span></p>
           </div>
         </div>
-        <a href="#" class="scroll-btn"><img src="img/mouse.png" width="17" height="46" alt="Вниз"></a>
       </section>
+      <a href="#" class="scroll-btn" data-role="down"><img src="img/mouse-down.png" width="17" height="46" alt="Вниз"></a>
 
       <section class="reasons">
         <div class="reasons__wrapper">
@@ -147,7 +147,7 @@
           </div>
         </div>
       </section>
-      <section class="choice">
+      <section class="choice" id="choice">
         <div class="choice__wrapper">
           <h2 class="choice__title">Выберите автомобиль</h2>
           <p class="choice__subtitle">Мы отобрали для вас 700 автомобилей по себестоимости</p>
@@ -213,27 +213,34 @@
         </div>
       </section>
       <section class="advantages">
-        <div class="advantages__item">
-          <img class="" src="img/auto_sl.jpg" width="1365" height="600">
-          <div class="advantages__info">
-            <div class="advantages__info-content">
-              <p class="advantages__text"><b>Carmart.ru</b> — самый быстрый способ купить или продать автомобиль в 3 клика!</p>
-              <a class="advantages__link" href="#">Купить онлайн</a>
+        <div class="carousel carousel--big" id="carousel-advantages">
+          <div class="slides">
+            <div class="advantages__item">
+              <img class="" src="img/auto_sl.jpg" width="1365" height="600">
+              <div class="advantages__info">
+                <div class="advantages__info-content">
+                  <p class="advantages__text"><b>Carmart.ru</b> — самый быстрый способ купить или продать автомобиль в 3 клика!</p>
+                  <a class="advantages__link" href="#">Купить онлайн</a>
+                </div>
+              </div>
+            </div>
+            <div class="advantages__item">
+              <img class="" src="img/auto_sl2.jpg" width="1365" height="600">
+              <div class="advantages__info">
+                <div class="advantages__info-content">
+                  <p class="advantages__text"><b>Carmart.ru</b> — lorem ipsum tersd!</p>
+                  <a class="advantages__link" href="#">Купить онлайн</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="advantages__item">
-          <img class="" src="img/auto_sl.jpg" width="1365" height="600">
-          <div class="advantages__info">
-            <div class="advantages__info-content">
-              <p class="advantages__text"><b>Carmart.ru</b> — самый быстрый способ купить или продать автомобиль в 3 клика!</p>
-              <a class="advantages__link" href="#">Купить онлайн</a>
-            </div>
-          </div>
+        <div class="advantages__scroll-btn">
+          <a href="#" class="scroll-btn scroll-btn--big" data-role="down"><img src="img/mouse-down-white.png" width="30" height="81" alt="Вниз"></a>
         </div>
       </section>
 
-      <section class="process">
+      <section class="process" id="process">
         <div class="process__wrapper">
           <h2 class="process__title">Как работает Carmart?</h2>
           <div class="process__items">
@@ -258,10 +265,21 @@
           <p class="process__subtitle">700 авто по себестоимости</p>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="reviews__wrapper">
           <h2 class="reviews__title">Отзывы о покупке</h2>
           <p class="reviews__exp">Отзывы счастливых покупателей Carmart</p>
+          <div class="revies__video">
+            <div class="reviews__info">
+              <div class="reviews__header">
+                <h2 class="reviews__name">Отзыв о покупке <span class="reviews__model">Nissan Quashqai 1,8 AT</span></h2>
+                <p class="reviews__author">Клиент: Юлия Волкова</p>
+              </div>
+              <p class="reviews__text">В интернет-магазине покупала автомобиль впервые. Кроме цены и красивых фотографий, привлекла возможность купить автомобиль без визита в салон. </p>
+              <a href="#" class="common-btn common-btn--reviews">Выбрать автомобиль с пробегом</a>
+
+            </div>
+          </div>
         </div>
       </section>
       <section class="rules">
@@ -278,6 +296,7 @@
 
         </div>
       </section>
+      <a href="#" class="scroll-btn" data-role="up"><img src="img/mouse-up.png" width="17" height="46" alt="Вниз"></a>
     </div>
   </main>
   <footer class="main-footer">

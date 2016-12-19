@@ -1,3 +1,16 @@
+.advantages {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.advantages__scroll-btn {
+  position: absolute;
+  margin-left: -15px;
+  left: 50%;
+  z-index: 5000;
+  bottom: 15px;
+}
+
 .advantages__item {
   position: relative;
 }
@@ -35,6 +48,8 @@
   border-radius: 10px;
   box-shadow: @box-shadow;
   transition: @transition;
+  opacity: 1;
+  background: linear-gradient(to bottom, #bc645d, #e85050);
   &:hover {
     opacity: 0.8;
   }
