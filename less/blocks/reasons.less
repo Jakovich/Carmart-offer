@@ -1,5 +1,6 @@
 .reasons {
-  margin-top: 100px;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .reasons__wrapper {
@@ -29,7 +30,7 @@
   text-align: center;
   padding: 5px;
   text-transform: uppercase;
-  padding-top: 95px;
+  padding-top: 105px;
   position: relative;
   &::before {
     position: absolute;
@@ -51,7 +52,7 @@
 
 .reasons__item--payment {
   &::before {
-    top: 40px;
+    top: 35px;
     background-position: @reasons-payment-offset-x @reasons-payment-offset-y;
     width: @reasons-payment-width;
     height: @reasons-payment-height;
@@ -61,7 +62,7 @@
 
 .reasons__item--return {
   &::before {
-    top: 40px;
+    top: 30px;
     background-position: @reasons-return-offset-x @reasons-return-offset-y;
     width: @reasons-return-width;
     height: @reasons-return-height;
@@ -71,7 +72,7 @@
 
 .reasons__item--reserve {
   &::before {
-    top: 40px;
+    top: 30px;
     background-position: @reasons-reserve-offset-x @reasons-reserve-offset-y;
     width: @reasons-reserve-width;
     height: @reasons-reserve-height;
@@ -84,6 +85,7 @@
   font-weight: 900;
   line-height: 21px;
   color: @text-common;
+  margin-bottom: 20px;
   span {
     display: block;
     font-weight: 400;
@@ -94,9 +96,14 @@
   color: @red;
   text-decoration: underline;
   font-size: 14px;
+  transition: @transition;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .reasons__subtitle {
   color: #999999;
   font-size: 12px;
+  margin: 25px 0;
 }

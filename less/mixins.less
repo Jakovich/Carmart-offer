@@ -5,3 +5,30 @@
     clear: both;
   }
 }
+
+.border-top() {
+  position: relative;
+  border-top: 1px solid #bfbfbf;
+  &::after {
+    content:'';
+    position: absolute;
+    background-image: url('../img/common-sprite.png');
+    background-position: @arrow-down-offset-x @arrow-down-offset-y;
+    width: @arrow-down-width;
+    height: @arrow-down-height;
+    left: 50%;
+    top: 4px;
+    margin-left: -@arrow-down-width/2;
+    background-color: #ffffff;
+  }
+  &::before {
+    content:'';
+    position: absolute;
+    background-color: #ffffff;
+    width: 22px;
+    height: 10px;
+    left: 50%;
+    margin-left: -11px;
+    top: -5px;
+  }
+}
