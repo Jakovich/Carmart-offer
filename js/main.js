@@ -80,13 +80,14 @@ $(document).ready(function(){
     shadow:false,
   })
   
+  
   //кнопка скролла наверх
   $('.main-footer__up').click(function(evt){
     evt.preventDefault();
     $("body,html").animate({scrollTop:0},800);
   })
   
-  $('.main-nav__item a').click(function () { 
+  $('.main-nav__item a, .scroll-btn').click(function () { 
      var elementClick = $(this).attr("href");
      var destination = $(elementClick).offset().top - 80;
      if($.browser.safari){
@@ -95,8 +96,6 @@ $(document).ready(function(){
        $('html').animate( { scrollTop: destination }, 1100 );
      }
      return false;
-});
-  
-                                
- 
+  });
+
 })

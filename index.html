@@ -118,7 +118,7 @@
           </div>
         </div>
       </section>
-      <a href="#" class="scroll-btn" data-role="down"><img src="img/mouse-down.png" width="17" height="46" alt="Вниз"></a>
+      <a href="#choice" class="scroll-btn"><img src="img/mouse-down.png" width="17" height="46" alt="Вниз"></a>
 
       <section class="reasons">
         <div class="reasons__wrapper">
@@ -236,7 +236,7 @@
           </div>
         </div>
         <div class="advantages__scroll-btn">
-          <a href="#" class="scroll-btn scroll-btn--big" data-role="down"><img src="img/mouse-down-white.png" width="30" height="81" alt="Вниз"></a>
+          <a href="#process" class="scroll-btn scroll-btn--big"><img src="img/mouse-down-white.png" width="30" height="81" alt="Вниз"></a>
         </div>
       </section>
 
@@ -277,8 +277,10 @@
               </div>
               <p class="reviews__text">В интернет-магазине покупала автомобиль впервые. Кроме цены и красивых фотографий, привлекла возможность купить автомобиль без визита в салон. </p>
               <a href="#" class="common-btn common-btn--reviews">Выбрать автомобиль с пробегом</a>
-
+              
             </div>
+            
+            <div id="ytplayer"></div>
           </div>
         </div>
       </section>
@@ -296,7 +298,7 @@
 
         </div>
       </section>
-      <a href="#" class="scroll-btn" data-role="up"><img src="img/mouse-up.png" width="17" height="46" alt="Вниз"></a>
+      <a href="#process" class="scroll-btn"><img src="img/mouse-up.png" width="17" height="46" alt="Вниз"></a>
     </div>
   </main>
   <footer class="main-footer">
@@ -314,6 +316,52 @@
   <script src="vendor/flipclock.min.js"></script>
   <script src="vendor/jquery.carousel-1.1.min.js"></script>
   <script src="js/main.min.js"></script>
+  <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('ytplayer', {
+          height: '558',
+          width: '935',
+          videoId: 'M7lc1UVf-VE',
+          events: {
+            
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+     
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          hideInfo()
+        } else if(event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED ) {
+          showInfo()
+        }
+      }
+    
+    function hideInfo() {
+      var infoPanel = document.querySelector('.reviews__info');
+      infoPanel.classList.add('reviews__info--hidden');
+    }
+    function showInfo() {
+      var infoPanel = document.querySelector('.reviews__info');
+      if (infoPanel.classList.contains('reviews__info--hidden'))
+      infoPanel.classList.remove('reviews__info--hidden');
+    }
+      
+    </script>
+
 </body>
 
 </html>

@@ -52,11 +52,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: @transition;
+}
+
+.reviews__info--hidden {
+  left: -380px;
 }
 
 .reviews__text {
   font-size: 16px;
   font-weight: 300;
+  margin-bottom: 30px;
 }
 
 .reviews__name {
@@ -81,4 +87,5 @@
   background-image: url('../img/video_bg.jpg');
   width: 935px;
   height: 558px;
+  overflow: hidden;
 }
