@@ -1,1 +1,0 @@
-Carmart offer landing
